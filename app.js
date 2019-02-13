@@ -8,6 +8,8 @@ var logger = require('morgan');
 var session = require('express-session');
 var fileStore = require('session-file-store')(session);
 var passport  = require('passport');
+mongoose.Promise = global.Promise;
+mongoose.set('debug', true);
 
 //import configurations
 var config = require('./utility/config');
